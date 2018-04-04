@@ -72,6 +72,22 @@ async function queryData() {
 
 }
 
+async function queryDataWithFilter() {
+    console.log('@queryDataWithFilter')
+    await
+        r   .table('users')
+            .filter(r.row('name').eq('John Doe'))
+            .run(connection, (err, cursor) => {
+                cursor.toArray((err, result) => {
+                    if (err) {
+                        throw err
+                    }
+                    console.log(JSON.stringify(result, null, 2))
+                })
+            })
+
+}
+
 async function main() {
     console.log('@START')
     await connect()
