@@ -25,6 +25,38 @@ async function createTable() {
             })
 }
 
+async function insertDataToTable() {
+    console.log('@insertDataToTable')
+    await
+        r   .table('users')
+            .insert([
+                {
+                    name: 'John Doe',
+                    age: 20,
+                    gender: 'Male',
+                    status: 'Active'
+                },
+                {
+                    name: 'Jason Bourne',
+                    age: 33,
+                    gender: 'Male',
+                    status: 'Inactive'
+                },
+                {
+                    name: 'Sheila Wicked',
+                    age: 18,
+                    gender: 'Female',
+                    status: 'Active'
+                }
+            ])
+            .run(connection, (err, result) => {
+                if (err) {
+                    throw err
+                }
+                console.log(JSON.stringify(result, null, 2))
+            })
+}
+
 async function main() {
     console.log('@START')
     await connect()
