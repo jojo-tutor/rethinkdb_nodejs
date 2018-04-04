@@ -31,20 +31,8 @@ async function insertDataToTable() {
         r   .table('users')
             .insert([
                 {
-                    name: 'John Doe',
-                    age: 20,
-                    gender: 'Male',
-                    status: 'Active'
-                },
-                {
-                    name: 'Jason Bourne',
-                    age: 33,
-                    gender: 'Male',
-                    status: 'Inactive'
-                },
-                {
-                    name: 'Sheila Wicked',
-                    age: 18,
+                    name: 'Kelly Klarkson',
+                    age: 45,
                     gender: 'Female',
                     status: 'Active'
                 }
@@ -65,12 +53,13 @@ async function queryData() {
                 if (err) {
                     throw err
                 }
-                cursor.toArray((err, result) => {
-                    if (err) {
-                        throw err
-                    }
-                    console.log(JSON.stringify(result, null, 2))
-                })
+                cursor
+                    .toArray((err, result) => {
+                        if (err) {
+                            throw err
+                        }
+                        console.log(JSON.stringify(result, null, 2))
+                    })
             })
 
 }
@@ -84,11 +73,12 @@ async function queryDataWithFilter() {
                 if (err) {
                     throw err
                 }
-                cursor.toArray((err, result) => {
-                    if (err) {
-                        throw err
-                    }
-                    console.log(JSON.stringify(result, null, 2))
+                cursor
+                    .toArray((err, result) => {
+                        if (err) {
+                            throw err
+                        }
+                        console.log(JSON.stringify(result, null, 2))
                 })
             })
 
@@ -107,14 +97,34 @@ async function queryDataById() {
             })
 }
 
+async function feedListener() {
+    console.log('@feedListener')
+    await
+        r   .table('users')
+            .changes()
+            .run(connection, (err, cursor) => {
+                if (err) {
+                    throw err
+                }
+                cursor
+                    .each((err, row) => {
+                        if (err) {
+                            throw err
+                        }
+                        console.log(JSON.stringify(row, null, 2))
+                    })
+            })
+}
+
 async function main() {
     console.log('@START')
     await connect()
+    await feedListener()
     // await createTable()
-    // await insertDataToTable()
+    await insertDataToTable()
     // await queryData()
     // await queryDataWithFilter()
-    await queryDataById()
+    // await queryDataById()
     console.log('@END')
     process.exit(1)
 }
