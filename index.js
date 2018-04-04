@@ -13,6 +13,18 @@ async function connect() {
             })
 }
 
+async function createTable() {
+    console.log('@createTable')
+    await
+        r   .db('test').tableCreate('users')
+            .run(connection, (err, result) => {
+                if (err) {
+                    throw err
+                }
+                console.log(JSON.stringify(result, null, 2))
+            })
+}
+
 async function main() {
     console.log('@START')
     await connect()
