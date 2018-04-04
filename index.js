@@ -111,9 +111,19 @@ async function feedListener() {
                         if (err) {
                             throw err
                         }
-                        console.log(JSON.stringify(row, null, 2))
+                        console.log(
+                            `NEW_FEED: ${JSON.stringify(row, null, 2)}`
+                        )
                     })
             })
+}
+
+async function updateAllData() {
+    console.log('@updateAllData')
+    await
+        r   .table('users')
+            .update({ status: 'Active' })
+
 }
 
 async function main() {
