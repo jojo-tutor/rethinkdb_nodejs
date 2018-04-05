@@ -142,6 +142,22 @@ async function updateData() {
         
 }
 
+async function updateDataWithNewField() {
+    console.log('@updateDataWithNewField')
+    await
+        r   .table('users')
+            .filter(r.row('name')
+            .eq('Kelly Klarkson'))
+            .update({ age: 21, hobbies: ['Basketball'] })
+            .run(connection, (err, result) => {
+                if (err) {
+                    throw err
+                }
+                console.log(JSON.stringify(result, null, 2))
+            })
+        
+}
+
 async function main() {
     console.log('@START')
     await connect()
@@ -151,7 +167,8 @@ async function main() {
     // await queryData()
     // await queryDataWithFilter()
     // await queryDataById()
-    await updateData()
+    // await updateData()
+    await updateDataWithNewField()
     console.log('@END')
     process.exit(1)
 }
