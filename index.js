@@ -192,8 +192,8 @@ async function deleteData() {
     await
         r   .table('users')
             .filter(
-                r   .row('age')
-                    .eq(18)
+                r   .row('id')
+                    .eq('649fdd55-45b4-42bf-86b7-de5e583fd1d9')
             )
             .delete()
             .run(connection, (err, result) => {
