@@ -152,8 +152,10 @@ async function updateDataWithNewField() {
     console.log('@updateDataWithNewField')
     await
         r   .table('users')
-            .filter(r.row('name')
-            .eq('Kelly Klarkson'))
+            .filter(
+                r   .row('name')
+                    .eq('Kelly Klarkson')
+            )
             .update({ age: 21, hobbies: ['Basketball'] })
             .run(connection, (err, result) => {
                 if (err) {
@@ -168,8 +170,10 @@ async function updateDataAppendFieldArray() {
     console.log('@updateDataAppendFieldArray')
     await
         r   .table('users')
-            .filter(r.row('name')
-            .eq('Kelly Klarkson'))
+            .filter(
+                r   .row('name')
+                    .eq('Kelly Klarkson')
+            )
             .update({
                 hobbies: r.row('hobbies')
                     .append('Football')
@@ -183,18 +187,36 @@ async function updateDataAppendFieldArray() {
         
 }
 
+async function deleteData() {
+    console.log('@deleteData')
+    await
+        r   .table('users')
+            .filter(
+                r   .row('age')
+                    .eq(18)
+            )
+            .delete()
+            .run(connection, (err, result) => {
+                if (err) {
+                    throw err
+                }
+                console.log(JSON.stringify(result, null, 2))
+            })
+}
+
 async function main() {
     console.log('@START')
     await connect()
     await feedListener()
     // await createTable()
-    await insertDataToTable()
+    // await insertDataToTable()
     // await queryData()
     // await queryDataWithFilter()
     // await queryDataById()
     // await updateData()
     // await updateDataWithNewField()
     // await updateDataAppendFieldArray()
+    await deleteData()
     console.log('@END')
     process.exit(1)
 }
