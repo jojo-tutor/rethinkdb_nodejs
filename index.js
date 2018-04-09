@@ -31,8 +31,14 @@ async function insertDataToTable() {
         r   .table('users')
             .insert([
                 {
-                    name: 'Kelly Klarkson',
-                    age: 45,
+                    name: 'John Doe',
+                    age: 20,
+                    gender: 'Male',
+                    status: 'Active'
+                },
+                {
+                    name: 'Riza Lim',
+                    age: 32,
                     gender: 'Female',
                     status: 'Active'
                 }
@@ -182,13 +188,13 @@ async function main() {
     await connect()
     await feedListener()
     // await createTable()
-    // await insertDataToTable()
+    await insertDataToTable()
     // await queryData()
     // await queryDataWithFilter()
     // await queryDataById()
     // await updateData()
-    await updateDataWithNewField()
-    await updateDataAppendFieldArray()
+    // await updateDataWithNewField()
+    // await updateDataAppendFieldArray()
     console.log('@END')
     process.exit(1)
 }
