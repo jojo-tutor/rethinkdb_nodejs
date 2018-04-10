@@ -153,6 +153,9 @@ async function updateAllData() {
 
 }
 
+/**
+ * The update data function
+ */
 async function updateData() {
     console.log('@updateData')
     await
@@ -169,6 +172,9 @@ async function updateData() {
         
 }
 
+/**
+ * The update data with new field function
+ */
 async function updateDataWithNewField() {
     console.log('@updateDataWithNewField')
     await
@@ -187,6 +193,9 @@ async function updateDataWithNewField() {
         
 }
 
+/**
+ * The append field to array function
+ */
 async function updateDataAppendFieldArray() {
     console.log('@updateDataAppendFieldArray')
     await
@@ -208,6 +217,9 @@ async function updateDataAppendFieldArray() {
         
 }
 
+/**
+ * The delete data function
+ */
 async function deleteData() {
     console.log('@deleteData')
     await
