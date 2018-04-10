@@ -60,6 +60,9 @@ async function insertDataToTable() {
             })
 }
 
+/**
+ * The query data function
+ */
 async function queryData() {
     console.log('@queryData')
     await
@@ -79,6 +82,9 @@ async function queryData() {
 
 }
 
+/**
+ * The query data with filter function
+ */
 async function queryDataWithFilter() {
     console.log('@queryDataWithFilter')
     await
