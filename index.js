@@ -105,6 +105,9 @@ async function queryDataWithFilter() {
 
 }
 
+/**
+ * The query data by id function
+ */
 async function queryDataById() {
     console.log('@queryDataById')
     await
@@ -118,6 +121,9 @@ async function queryDataById() {
             })
 }
 
+/**
+ * The change listener function
+ */
 async function feedListener() {
     console.log('@feedListener')
     await
