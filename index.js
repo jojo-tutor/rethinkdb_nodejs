@@ -2,6 +2,9 @@ const r  = require('rethinkdb')
 
 let connection
 
+/**
+ * The connect function
+ */
 async function connect() {
     console.log('@connect')
     await
@@ -13,6 +16,9 @@ async function connect() {
             })
 }
 
+/**
+ * The create table function
+ */
 async function createTable() {
     console.log('@createTable')
     await
@@ -25,6 +31,9 @@ async function createTable() {
             })
 }
 
+/**
+ * The connect function
+ */
 async function insertDataToTable() {
     console.log('@insertDataToTable')
     await
@@ -203,7 +212,9 @@ async function deleteData() {
                 console.log(JSON.stringify(result, null, 2))
             })
 }
-
+/**
+ * The main function
+ */
 async function main() {
     console.log('@START')
     await connect()
