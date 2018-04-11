@@ -28,6 +28,17 @@ async function connect() {
 
 /**
  * The create table function
+ * @example async function createTable() {
+    console.log('@createTable')
+    await
+        r   .db('test').tableCreate('users')
+            .run(connection, (err, result) => {
+                if (err) {
+                    throw err
+                }
+                console.log(JSON.stringify(result, null, 2))
+            })
+}
  */
 async function createTable() {
     console.log('@createTable')
@@ -261,7 +272,7 @@ async function main() {
     // await updateData()
     // await updateDataWithNewField()
     // await updateDataAppendFieldArray()
-    await deleteData()
+    // await deleteData()
     console.log('@END')
     process.exit(1)
 }
