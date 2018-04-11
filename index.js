@@ -4,6 +4,16 @@ let connection
 
 /**
  * The connect function
+ * @example async function connect() {
+    console.log('@connect')
+    await
+        r   .connect({ host: 'localhost', port: 28015 }, (err, conn) => {
+                if (err) {
+                    throw err
+                }
+                connection = conn
+            })
+}
  */
 async function connect() {
     console.log('@connect')

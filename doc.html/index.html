@@ -1,0 +1,740 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>rethink1 1.0.0 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>rethink1</h3>
+          <div class='mb1'><code>1.0.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#connect'
+                  class="">
+                  connect
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createtable'
+                  class="">
+                  createTable
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#insertdatatotable'
+                  class="">
+                  insertDataToTable
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#querydata'
+                  class="">
+                  queryData
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#querydatawithfilter'
+                  class="">
+                  queryDataWithFilter
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#querydatabyid'
+                  class="">
+                  queryDataById
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#feedlistener'
+                  class="">
+                  feedListener
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatedata'
+                  class="">
+                  updateData
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatedatawithnewfield'
+                  class="">
+                  updateDataWithNewField
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatedataappendfieldarray'
+                  class="">
+                  updateDataAppendFieldArray
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#deletedata'
+                  class="">
+                  deleteData
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#main'
+                  class="">
+                  main
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='connect'>
+      connect
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The connect function</p>
+
+
+  <div class='pre p1 fill-light mt0'>connect()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">connect</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'@connect'</span>)
+<span class="hljs-keyword">await</span>
+r   .connect({ <span class="hljs-attr">host</span>: <span class="hljs-string">'localhost'</span>, <span class="hljs-attr">port</span>: <span class="hljs-number">28015</span> }, (err, conn) =&gt; {
+<span class="hljs-keyword">if</span> (err) {
+<span class="hljs-keyword">throw</span> err
+}
+connection = conn
+})
+}</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createtable'>
+      createTable
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The create table function</p>
+
+
+  <div class='pre p1 fill-light mt0'>createTable()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='insertdatatotable'>
+      insertDataToTable
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The connect function</p>
+
+
+  <div class='pre p1 fill-light mt0'>insertDataToTable()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='querydata'>
+      queryData
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The query data function</p>
+
+
+  <div class='pre p1 fill-light mt0'>queryData()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='querydatawithfilter'>
+      queryDataWithFilter
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The query data with filter function</p>
+
+
+  <div class='pre p1 fill-light mt0'>queryDataWithFilter()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='querydatabyid'>
+      queryDataById
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The query data by id function</p>
+
+
+  <div class='pre p1 fill-light mt0'>queryDataById()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='feedlistener'>
+      feedListener
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The change listener function</p>
+
+
+  <div class='pre p1 fill-light mt0'>feedListener()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatedata'>
+      updateData
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The update data function</p>
+
+
+  <div class='pre p1 fill-light mt0'>updateData()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatedatawithnewfield'>
+      updateDataWithNewField
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The update data with new field function</p>
+
+
+  <div class='pre p1 fill-light mt0'>updateDataWithNewField()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatedataappendfieldarray'>
+      updateDataAppendFieldArray
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The append field to array function</p>
+
+
+  <div class='pre p1 fill-light mt0'>updateDataAppendFieldArray()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='deletedata'>
+      deleteData
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The delete data function</p>
+
+
+  <div class='pre p1 fill-light mt0'>deleteData()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='main'>
+      main
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The main function</p>
+
+
+  <div class='pre p1 fill-light mt0'>main()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
