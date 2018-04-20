@@ -308,7 +308,7 @@ async function filterFunction() {
     console.log('@deleteData')
     await
         r   .table('users')
-            filter()
+            .filter(f => f('name').eq('Name'))
 }
 
 /**
