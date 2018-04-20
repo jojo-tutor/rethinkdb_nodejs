@@ -327,6 +327,7 @@ async function main() {
     // await updateDataWithNewField()
     // await updateDataAppendFieldArray()
     // await deleteData()
+    await filterFunction()
     console.log('@END')
     process.exit(1)
 }
