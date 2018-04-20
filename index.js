@@ -300,6 +300,17 @@ async function deleteData() {
                 console.log(JSON.stringify(result, null, 2))
             })
 }
+
+/**
+ * The filter function
+ */
+async function filterFunction() {
+    console.log('@deleteData')
+    await
+        r   .table('users')
+            filter()
+}
+
 /**
  * The main function
  */
